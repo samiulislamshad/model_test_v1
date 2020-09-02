@@ -11,8 +11,8 @@ class AuthService
   {
     try
         {
-           AuthResult result= await _auth.signInAnonymously();
-           FirebaseUser user= result.user;
+           UserCredential result= await _auth.signInAnonymously();
+           User user= result.user;
            return user;
         }
         catch (error)
